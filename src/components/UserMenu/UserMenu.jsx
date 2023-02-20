@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import css from './UserMenu.module.css';
 import { logOut } from 'redux/auth/slice';
-import { selectToken,selectUserData } from 'redux/auth/selectors';
+import {selectUserData } from 'redux/auth/selectors';
 const UserMenu = () => {
 
   const dispatch = useDispatch()
