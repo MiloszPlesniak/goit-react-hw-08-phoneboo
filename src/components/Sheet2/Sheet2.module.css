@@ -1,0 +1,48 @@
+@keyframes changeSheetIncrement {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.singlePage {
+  background-color: rgb(248, 243, 169);
+  width: 500px;
+  padding: 20px 10px;
+  border: 1px solid black;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  direction: normal;
+}
+
+.singlePage__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.singlePage__item {
+  padding-top: 20px;
+}
+/* .dec{
+  left: 500px;
+  animation-play-state:running;
+}
+.inc{
+  left: 0px;
+  animation-play-state: paused;
+} */
+.singlePage__changeSheetIncrement {
+  animation-name: changeSheetIncrement;
+}
+
+.singlePage__changeSheetDecrement {
+  animation-name: changeSheetIncrement;
+  animation-direction: reverse;
+}

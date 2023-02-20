@@ -1,7 +1,7 @@
 import css from './AddingContacts.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
-import { selectContact } from 'redux/selectors';
+import { addContact } from 'redux/contacts/slice';
+import { selectContact } from 'redux/contacts/selectors';
 import { useRef } from 'react';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 

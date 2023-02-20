@@ -1,18 +1,56 @@
-import ContactList from 'components/feature/ContactList/ContactList';
-import AddingContacts from 'components/feature/AddingContacts/AddingContacts';
-import { useDispatch } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contactsSlice';
+
+import { PrivateRoute } from './PrivateRoute';
+import { RestrictedRoute } from './RestrictedRoute';
+
+import { selectIsisRefreshing } from 'redux/auth/selectors';
+import { refreshUser } from 'redux/auth/slice';
+
+import Layout from './Layout';
+import RegisterForm from './RegisterForm/RegisterForm';
+import LoginForm from './LoginForm/LoginForm';
+import Book from './Book/Book';
 
 export const App = () => {
   const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsisRefreshing);
+
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
-  return (
+
+  return isRefreshing ? (
+    <p>Refresging user...</p>
+  ) : (
     <div>
-      <AddingContacts />
-      <ContactList />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            path="register"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<RegisterForm />}
+              />
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <RestrictedRoute
+                redirectTo="/contacts"
+                component={<LoginForm />}
+              />
+            }
+          />
+          <Route
+            path="contacts"
+            element={<PrivateRoute redirectTo="/login" component={<Book />} />}
+          />
+        </Route>
+      </Routes>
     </div>
   );
 };

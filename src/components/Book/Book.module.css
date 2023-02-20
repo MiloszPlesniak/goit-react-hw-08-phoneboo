@@ -1,0 +1,9 @@
+.book {
+  position: relative;
+  left: 50%;
+  transform: translateX(-100% );
+  background-color: black;
+  width: min-content;
+ 
+}
+

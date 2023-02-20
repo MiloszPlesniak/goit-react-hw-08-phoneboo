@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://63e2c57f619fce55d40e8019.mockapi.io';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const initialState = {
   items: [],
@@ -12,22 +12,22 @@ const initialState = {
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
   async () => {
-    const response = await axios.get('/contacts');
-    return response.data;
+    const res = await axios.get('/contacts');
+    return res.data;
   }
 );
 export const addContact = createAsyncThunk(
   'contact/addContact',
   async contact => {
-    const response = await axios.post('/contacts', contact);
-    return response.data;
+    const res = await axios.post('/contacts', contact);
+    return res.data;
   }
 );
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async id => {
-    const response = await axios.delete(`/contacts/${id}`);
-    return response.data;
+    const res = await axios.delete(`/contacts/${id}`);
+    return res.data;
   }
 );
 

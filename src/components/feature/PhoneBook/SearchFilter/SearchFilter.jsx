@@ -1,4 +1,4 @@
-import { changefilter } from 'redux/filterSlice';
+import { changefilter } from 'redux/filter/slice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 
