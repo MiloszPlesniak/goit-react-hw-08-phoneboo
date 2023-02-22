@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 
 import { selectIsLoading } from 'redux/contacts/selectors';
-import ListElement from 'components/feature/PhoneBook/ListElement/ListElement';
-import SearchFilter from 'components/feature/PhoneBook/SearchFilter/SearchFilter';
+import ListElement from 'components/PhoneBook/ListElement/ListElement';
+import SearchFilter from 'components/PhoneBook/SearchFilter/SearchFilter';
 import { selectFilter } from 'redux/filter/selectors';
 
 const ContactList = ({ contacts }) => {

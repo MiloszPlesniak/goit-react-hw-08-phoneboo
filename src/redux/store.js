@@ -33,7 +33,7 @@ export const store = configureStore({
     contacts: contactsReducer,
     filter: filterReducer,
   },
-middleware,
+  middleware,
   devTools: process.env.NODE_ENV === 'development',
 });
 

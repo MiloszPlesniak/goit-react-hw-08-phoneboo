@@ -2,11 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { PrivateRoute } from './PrivateRoute';
-import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from '../routes/PrivateRoute';
+import { RestrictedRoute } from '../routes/RestrictedRoute';
 
 import { selectIsisRefreshing } from 'redux/auth/selectors';
-import { refreshUser } from 'redux/auth/slice';
+import { refreshUser } from 'redux/auth/thunk';
 
 import Layout from './Layout';
 import RegisterForm from './RegisterForm/RegisterForm';

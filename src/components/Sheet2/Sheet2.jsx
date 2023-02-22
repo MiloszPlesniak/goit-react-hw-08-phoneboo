@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import css from './Sheet2.module.css';
-import ContactList from 'components/feature/PhoneBook/ContactList/ContactList';
+import ContactList from 'components/PhoneBook/ContactList/ContactList';
 const sheet2 = ({
   handleNextPage,
   handlePrevPage,

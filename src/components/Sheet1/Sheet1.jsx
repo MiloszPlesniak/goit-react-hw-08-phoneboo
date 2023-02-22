@@ -1,7 +1,6 @@
 import css from './Sheet1.module.css';
-import AddingContacts from 'components/feature/PhoneBook/AddingContacts/AddingContacts';
+import AddingContacts from 'components/PhoneBook/AddingContacts/AddingContacts';
 const sheet1 = () => {
-  
   return (
     <div className={css.singlePage}>
       <AddingContacts />

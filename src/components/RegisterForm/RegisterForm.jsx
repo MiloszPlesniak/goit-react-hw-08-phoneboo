@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 import css from './RegisterForm.module.css';
-import { registerUser } from 'redux/auth/slice';
+import { registerUser } from 'redux/auth/thunk';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();

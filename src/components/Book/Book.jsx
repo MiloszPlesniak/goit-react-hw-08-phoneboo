@@ -28,7 +28,7 @@ const Book = () => {
     let number = 1;
     let sliceA = -8;
     let sliceB = 0;
-    
+
     for (let i = 0; i < contacts.length / 8; i++) {
       pageArray.push(number++);
     }
@@ -36,7 +36,7 @@ const Book = () => {
     return pageArray.map(item => {
       sliceA = sliceA + 8;
       sliceB = sliceB + 8;
-      
+
       return (
         <Sheet2
           key={nanoid()}

@@ -1,13 +1,12 @@
-.registerForm{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
-.registerForm>label{
-    margin: 5px 0px 5px 0px;
+.registerForm > label {
+  margin: 5px 0px 5px 0px;
 }
-.registerForm__btn{
-    margin-top: 5px;
-    width: 100px;
+.registerForm__btn {
+  margin-top: 5px;
+  width: 100px;
 }
