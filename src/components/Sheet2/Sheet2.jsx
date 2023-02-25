@@ -1,40 +1,21 @@
 import clsx from 'clsx';
 import css from './Sheet2.module.css';
+import btnCss from '../PhoneBook/ChangePageBtn/ChangePageBtn.module.css';
 import ContactList from 'components/PhoneBook/ContactList/ContactList';
-const sheet2 = ({
-  handleNextPage,
-  handlePrevPage,
-  chosePage,
-  page,
-  contacts,
-}) => {
+import ChnagePageBtn from 'components/PhoneBook/ChangePageBtn/ChangePageBtn';
+const sheet2 = ({ page, contacts, nextPage, prevPage }) => {
+  console.log(btnCss);
   return (
     <div
+      id={page}
       style={{
         zIndex: page - page - page,
       }}
-      className={
-        chosePage >= page
-          ? clsx(css.singlePage, css.singlePage__changeSheetIncrement)
-          : clsx(css.singlePage)
-      }
+      className={clsx(css.singlePage)}
     >
       <ContactList contacts={contacts} />
-      <p>{page}</p>
-      <button
-        onClick={() => {
-          handlePrevPage(1);
-        }}
-      >
-        prev
-      </button>
-      <button
-        onClick={() => {
-          handleNextPage(1);
-        }}
-      >
-        next
-      </button>
+      <ChnagePageBtn style={btnCss.btnPrevPage} onClick={prevPage} />
+      <ChnagePageBtn style={btnCss.btnNextPage} onClick={nextPage} />
     </div>
   );
 };

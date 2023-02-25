@@ -1,0 +1,22 @@
+.btn {
+  position: relative;
+  transform: rotatey(180deg);
+  background-color: transparent;
+  border: none;
+  fill: grey;
+  font-size: 30px;
+}
+.btn:hover{
+    transform:;
+}
+.btnNextPage {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  transform: rotateX(30deg)
+}
+.btnPrevPage {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+}

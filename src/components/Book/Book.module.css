@@ -1,9 +1,18 @@
 .book {
   position: relative;
+  top: 15px;
   left: 50%;
-  transform: translateX(-100% );
-  background-color: black;
+  transform: translateX(-100%);
   width: min-content;
- 
+  height: 100%;
 }
 
+.bookCover {
+  background-color:#2C2C98;
+  width: 1050px;
+  height: 40em;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
