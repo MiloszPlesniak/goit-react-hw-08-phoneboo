@@ -1,27 +1,34 @@
-.AddFormInput{
-    margin-top: 10px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 3px solid black;
-    height: 40px;
-    width: 250px;
+.inputText {
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid black;
+  height: 40px;
+  width: 250px;
 }
-.AddFormInput::placeholder{
-    font-size: 20px;
-    font-family: 'Shantell Sans', cursive;
-    text-align: center;
-}
-
-.AddFormBtn{
-    margin-top: 15px;
-
+.inputText::placeholder {
+  font-size: 20px;
+  font-family: 'Shantell Sans', cursive;
+  text-align: center;
 }
 
-.form{
-    margin-left: 60px;
-    margin-top: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.AddFormBtn {
+  margin-top: 20px;
+  margin-left: 100px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.AddFormBtn:hover{
+    transform: scale(1.3);
+}
+
+.form {
+  margin-left: 60px;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

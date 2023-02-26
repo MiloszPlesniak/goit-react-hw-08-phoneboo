@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
-import css from './LoginForm.module.css';
+import { FiLogIn } from 'react-icons/fi';
+import css from '../RegisterForm/RegisterForm.module.css';
 import { loginUser } from 'redux/auth/thunk';
+import HomePageBook from 'components/HomePage/HomePageBook';
 const LoginForm = () => {
   const dispatch = useDispatch();
 
@@ -16,17 +18,19 @@ const LoginForm = () => {
   };
 
   return (
-    <form className={css.loginForm} onSubmit={loginUserInApi}>
-      <label>
-        <input type="text" name="email" />
-      </label>
-      <label>
-        <input type="password" name="password" />
-      </label>
-      <button className={css.loginForm__btn} type="submit">
-        Log in
-      </button>
-    </form>
+    <HomePageBook>
+      <form className={css.registerForm} onSubmit={loginUserInApi}>
+        <label>
+          <input type="text" name="email" autoComplete="off" />
+        </label>
+        <label>
+          <input type="password" name="password" autoComplete="off" />
+        </label>
+        <button className={css.registerForm__btn} type="submit">
+          <FiLogIn />
+        </button>
+      </form>
+    </HomePageBook>
   );
 };
 export default LoginForm;

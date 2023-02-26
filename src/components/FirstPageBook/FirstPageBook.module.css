@@ -1,0 +1,63 @@
+.firstPageBook {
+  background-color: #f7df95;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 39px,
+    red 20px,
+    red 40px
+  );
+  /* display: none; */
+  width: 500px;
+  padding: 20px 10px;
+  border: 1px solid black;
+  margin: 0;
+  height: 95%;
+}
+.firstPageBook::after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 0px;
+  height: 95%;
+  border: 1px red solid;
+}
+.firstPageBookTitle {
+  font-size: 24px;
+  font-family: 'Shantell Sans', cursive;
+  text-align: center;
+  margin-left: 60px;
+  margin-top: -4px;
+}
+
+.firstPageBookSignature {
+  font-size: 20px;
+  font-family: 'Shantell Sans', cursive;
+  position: absolute;
+  bottom: 37px;
+  left: 15%;
+}
+.firstPageBookLogout {
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.firstPageBookLogout:hover {
+  animation-name: LogOutIconAnimate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  direction: normal;
+}
+
+@keyframes LogOutIconAnimate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

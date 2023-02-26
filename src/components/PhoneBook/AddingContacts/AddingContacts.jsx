@@ -1,4 +1,5 @@
 import css from './AddingContacts.module.css';
+import { BsVectorPen } from 'react-icons/bs';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/slice';
 import { selectContact } from 'redux/contacts/selectors';
@@ -31,7 +32,7 @@ const AddingContacts = () => {
         <label>
           <input
             ref={name}
-            className={css.AddFormInput}
+            className={css.inputText}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -45,7 +46,7 @@ const AddingContacts = () => {
         <label>
           <input
             ref={number}
-            className={css.AddFormInput}
+            className={css.inputText}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -56,8 +57,12 @@ const AddingContacts = () => {
           />
           <br />
         </label>
-        <button type="submit" className={css.AddFormBtn}>
-          Add
+        <button
+          title="Add Contact"
+          type="submit"
+          className={css.AddFormBtn}
+        >
+          <BsVectorPen />
         </button>
       </form>
     </div>

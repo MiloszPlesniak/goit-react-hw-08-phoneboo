@@ -7,8 +7,8 @@ import { selectContact } from 'redux/contacts/selectors';
 import css from './Book.module.css';
 import sheetCss from '../Sheet2/Sheet2.module.css';
 import Sheet2 from '../Sheet2/Sheet2';
-import Sheet1 from '../Sheet1/Sheet1';
-import ChnagePageBtn from 'components/PhoneBook/ChangePageBtn/ChangePageBtn';
+import Sheet1 from '../FirstPageBook/FirstPageBook';
+
 const Book = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -65,6 +65,7 @@ const Book = () => {
           contacts={contacts.slice(sliceA, sliceB)}
           nextPage={nextPage}
           prevPage={prevPage}
+          lastPage={pageArray.length}
         />
       );
     });
@@ -72,6 +73,7 @@ const Book = () => {
 
   return (
     <div className={css.bookCover}>
+      
       <div ref={generatedPage} className={css.book}>
         <Sheet1 />
         {pageGenerator(contacts)}

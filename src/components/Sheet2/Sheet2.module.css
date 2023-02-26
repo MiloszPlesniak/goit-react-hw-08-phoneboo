@@ -1,22 +1,23 @@
 @keyframes changeSheetIncrement {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0%) rotateY(0deg);
   }
+
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateY(-180deg);
   }
 }
 @keyframes changeSheetDecrement {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateY(-180deg);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0%) rotateY(0deg);
   }
 }
 
 .singlePage {
-  background-color: #F7DF95;
+  background-color: #f7df95;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
@@ -55,9 +56,7 @@
 .singlePage__item {
   padding-top: 20px;
 }
-.d {
-  left: 0px;
-}
+
 .singlePage__changeSheetIncrement {
   animation-name: changeSheetIncrement;
 }

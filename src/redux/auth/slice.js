@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 import { registerUser, loginUser, logOut, refreshUser } from './thunk';
 
 export const setAuthHeader = token => {
@@ -25,11 +26,13 @@ export const authSlice = createSlice({
       state.user = payload.user;
       state.token = payload.token;
       state.isLoggedIn = true;
+      <Navigate to="/contacts" />;
     },
     [loginUser.fulfilled](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
       state.isLoggedIn = true;
+      <Navigate to="/contacts" />;
     },
     [logOut.fulfilled](state) {
       state.isLoggedIn = false;

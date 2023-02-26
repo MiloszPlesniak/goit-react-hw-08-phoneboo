@@ -1,16 +1,22 @@
 import { NavLink } from 'react-router-dom';
-
+import css from './NotLogged.module.css';
 const NotLogged = () => {
   return (
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
+    <ul className={css.navList}>
+      <li className={css.navItem}>
+        <NavLink style={{ textDecoration: 'none' }} to="/">
+          Home
+        </NavLink>
       </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
+      <li className={css.navItem}>
+        <NavLink style={{ textDecoration: 'none' }} to="/register">
+          Register
+        </NavLink>
       </li>
-      <li>
-        <NavLink to="/login">LogIn</NavLink>
+      <li className={css.navItem}>
+        <NavLink style={{ textDecoration: 'none' }} to="/login">
+          LogIn
+        </NavLink>
       </li>
     </ul>
   );
