@@ -36,7 +36,6 @@ const Book = () => {
     const pageArray = Array.from(generatedPage.current.children);
     pageArray.forEach(page => {
       if (Number.parseInt(page.id) - 1 === chosePage) {
-        console.log(page);
         page.classList.add(sheetCss.singlePage__changeSheetDecrement);
         page.classList.remove(sheetCss.singlePage__changeSheetIncrement);
       }

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import { selectIsLoading } from 'redux/contacts/selectors';
 import ListElement from 'components/PhoneBook/ListElement/ListElement';
-import SearchFilter from 'components/PhoneBook/SearchFilter/SearchFilter';
+
 import { selectFilter } from 'redux/filter/selectors';
 import css from './ContactList.module.css';
 const ContactList = ({ contacts }) => {
