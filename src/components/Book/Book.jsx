@@ -5,9 +5,9 @@ import { nanoid } from 'nanoid';
 import { fetchContacts } from 'redux/contacts/slice';
 import { selectContact } from 'redux/contacts/selectors';
 import css from './Book.module.css';
-import sheetCss from '../Sheet2/Sheet2.module.css';
-import Sheet2 from '../Sheet2/Sheet2';
-import Sheet1 from '../FirstPageBook/FirstPageBook';
+import sheetCss from '../PageContactsList/PageContactsList.module.css';
+import Sheet2 from '../PageContactsList/PageContactsList';
+import FirstPageBook from '../FirstPageBook/FirstPageBook';
 
 const Book = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,6 @@ const Book = () => {
 
   const nextPage = () => {
     chosePage++;
-    console.log(chosePage);
     const pageArray = Array.from(generatedPage.current.children);
     pageArray.forEach(page => {
       if (Number.parseInt(page.id) === chosePage) {
@@ -33,7 +32,7 @@ const Book = () => {
     if (chosePage > 0) {
       chosePage = chosePage - 1;
     }
- 
+
     const pageArray = Array.from(generatedPage.current.children);
     pageArray.forEach(page => {
       if (Number.parseInt(page.id) - 1 === chosePage) {
@@ -73,9 +72,8 @@ const Book = () => {
 
   return (
     <div className={css.bookCover}>
-      
       <div ref={generatedPage} className={css.book}>
-        <Sheet1 />
+        <FirstPageBook />
         {pageGenerator(contacts)}
       </div>
     </div>

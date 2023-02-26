@@ -5,6 +5,7 @@ import { logOut } from 'redux/auth/thunk';
 import { selectUserData } from 'redux/auth/selectors';
 import css from './FirstPageBook.module.css';
 import AddingContacts from 'components/PhoneBook/AddingContacts/AddingContacts';
+import SearchFilter from 'components/PhoneBook/SearchFilter/SearchFilter';
 const FirstPageBook = () => {
   const { name } = useSelector(selectUserData);
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const FirstPageBook = () => {
       <button onClick={logout} className={css.firstPageBookLogout}>
         <BiLogOut />
       </button>
+      <SearchFilter/>
     </div>
   );
 };

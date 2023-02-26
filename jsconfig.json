@@ -2,5 +2,5 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src", "src/components/Sheet2"]
+  "include": ["src", "src/components/PageContactsList"]
 }
